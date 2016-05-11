@@ -134,16 +134,16 @@ The most difficult part here will be to generate the correct normal for each ver
 
 If the data structure is set up correctly, you should see an object that looks like this (this is for the bunny model):
 
-![scene 1](https://github.gatech.edu/pages/cs3451f15/a3/img/bunny.png)
+![scene 1](img/bunny.png)
 
 You should note a few things about this image.  First, the colors are blended across the surface;  this allows you to see the structure, but not the individual polygons.  You can, however, see the polygon structure on the edge of the object.  Second, the lighting in the shader allows us to see the structure more clearly, because of the surface color is brightest when facing the light, and fades to black as it faces away from the light (giving a simple appearance of "shadows").  Similarly, the use of a specular highlight will allow you to know if your surface normals are pointing out of the object (rather than into the object): if the surface normals point into the object (i.e., are backwards) there won't be any specular hightlights (why?).
 
 ### Subdivision
 The most challenging part of the assignment is subdivision.  The subdivision algorithm is illustrated in these two slides from Jarek's [meshprocessing](https://github.gatech.edu/pages/cs3451f15/files/meshProcessing.ppt.pdf) slides:
 
-![slide 1](https://github.gatech.edu/pages/cs3451f15/a3/img/subdivision1.png)
+![slide 1](img/subdivision1.png)
 
-![slide 2](https://github.gatech.edu/pages/cs3451f15/a3/img/subdivision2.png)
+![slide 2](img/subdivision2.png)
 
 The first slide shows the effect of the algorithm on a mesh:  each triangle is divided into 4, and the new points are shifted away from the old surface to smooth it out based on local geometry (the ```bulge()``` step in the algorithm).
 
